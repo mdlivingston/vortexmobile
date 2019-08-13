@@ -1,0 +1,7 @@
+<ActionBar class="action-bar">
+    <Label class="header" text="Severe"></Label>
+    <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
+    </NavigationButton>
+</ActionBar>
+
+<ns-webview [url]="'https://www.weather.gov/bmx/submit_storm_report'"></ns-webview>

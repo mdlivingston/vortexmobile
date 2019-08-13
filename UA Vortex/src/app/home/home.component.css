@@ -1,0 +1,34 @@
+/* Add mobile styles for the component here.  */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.button-font {
+  font-family: "Nunito";
+  font-size: 18;
+}
+
+.title {
+  padding: 8 16 4 8;
+  font-size: 28;
+  color: #fff;
+  font-family: "Nunito";
+}
+
+.blood-color {
+  background-color: #cc0c0c;
+}
+
+.medicine-color {
+  background-color: #82c91e;
+}
+
+.weight-color {
+  background-color: #fd7e14;
+}
+
+.activity-color {
+  background-color: #be4bdb;
+}

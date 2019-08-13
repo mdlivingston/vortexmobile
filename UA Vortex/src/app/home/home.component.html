@@ -1,7 +1,46 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Home"></Label>
+    <Label class="header" text="UA Vortex"></Label>
+    <ActionItem ios.position="right" android.position="actionBar">
+        <Label class="fas" android:style="padding-right: 15" text="&#xf085;"></Label>
+    </ActionItem>
 </ActionBar>
 
-<GridLayout class="page">
-    <!-- Add your page content here -->
+
+
+<GridLayout backgroundColor="black" columns="*" rows="225,*,*,*">
+    <Image [nsRouterLink]="['/survey']" pageTransition="slideLeft" class="container" col="0" row="0"
+        stretch="aspectFill" src="~/images/survey.jpg">
+    </Image>
+    <GridLayout [nsRouterLink]="['/survey']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Take the Survey"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image [nsRouterLink]="['/severe']" pageTransition="slideLeft" class="container" col="0" row="1"
+        stretch="aspectFill" src="~/images/storm.jpg">
+    </Image>
+    <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Report Severe Weather"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image [nsRouterLink]="['/prepare']" pageTransition="slideLeft" class="container" col="0" row="2"
+        stretch="aspectFill" src="~/images/cross.jpg">
+    </Image>
+    <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Prepare"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image [nsRouterLink]="['/informed']" class="container" pageTransition="slideLeft" col="0" row="3"
+        stretch="aspectFill" src="~/images/tv.jpg">
+    </Image>
+    <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Stay Informed"></Label>
+        </StackLayout>
+    </GridLayout>
 </GridLayout>

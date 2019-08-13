@@ -10,7 +10,7 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 
-@import "~nativescript-theme-core/css/core.light.css";
+@import "~nativescript-theme-core/css/core.dark.css";
 
 /*
 For example, the following CSS rule changes the font size of all UI
@@ -37,7 +37,7 @@ components that have the btn class name.
 }
 
 .wizard-btn-round {
-  background-color: #cc0c0c;
+  background-color: #63b7d5;
   border-radius: 50%;
   height: 50;
   width: 50;
@@ -54,7 +54,7 @@ components that have the btn class name.
 
 .btn-primary {
   height: 50;
-  background-color: #cc0c0c;
+  background-color: #63b7d5;
   border-radius: 25;
   font-size: 20;
   font-weight: 400;
@@ -70,7 +70,7 @@ components that have the btn class name.
 }
 
 .list-view {
-  border: 1px solid #cc0c0c;
+  border: 1px solid #63b7d5;
 }
 
 .list-item {
@@ -98,9 +98,9 @@ components that have the btn class name.
 }
 
 .action-bar {
-  background-color: #cc0c0c;
+  background-color: #000000;
   color: white;
-  border-color: #000;
+  border-color: rgb(29, 15, 224);
   border-bottom-width: 0.5;
 }
 
