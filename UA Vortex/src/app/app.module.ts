@@ -1,3 +1,5 @@
+import { DataService } from './services/data.service';
+import { ComponentModule } from './components/component.module';
 import { WebviewComponent } from './components/webview/webview.component';
 
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
@@ -7,17 +9,22 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
+
+
 @NgModule({
     bootstrap: [
         AppComponent
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptAnimationsModule,
+        ComponentModule
     ],
     declarations: [
         AppComponent,
     ],
+    providers: [DataService],
     schemas: [
         NO_ERRORS_SCHEMA
     ]

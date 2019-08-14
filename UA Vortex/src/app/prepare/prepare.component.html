@@ -1,5 +1,19 @@
 <ActionBar class="action-bar">
-    <Label class="header" text="UA Vortex"></Label>
+    <Label class="header" text="Prepare"></Label>
     <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
     </NavigationButton>
 </ActionBar>
+
+
+<StackLayout backgroundColor="black" class="middle" height="100%">
+    <MDButton (tap)="goToPDF('flood')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
+        text="Flood Safety">
+    </MDButton>
+    <MDButton (tap)="goToPDF('tornado')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
+        text="Tornado Safety"></MDButton>
+    <MDButton (tap)="goToPDF('thunder')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
+        text="Thunderstorm Safety">
+    </MDButton>
+    <MDButton (tap)="goToPDF('heat')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
+        text="Heat Safety"></MDButton>
+</StackLayout>

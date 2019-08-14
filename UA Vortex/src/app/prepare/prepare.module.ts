@@ -4,13 +4,12 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { PrepareRoutingModule } from "./prepare-routing.module";
 
-import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular/listview-directives";
-import { NativeScriptFormsModule } from "nativescript-angular/forms";
-
+import { NativeScriptMaterialButtonModule } from "nativescript-material-button/angular";
 @NgModule({
     imports: [
         NativeScriptCommonModule,
         PrepareRoutingModule,
+        NativeScriptMaterialButtonModule
     ],
     declarations: [
         PrepareComponent

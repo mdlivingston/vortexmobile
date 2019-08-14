@@ -1,0 +1,6 @@
+<ActionBar class="action-bar">
+    <Label class="header" [text]="dataService.pdfTitle"></Label>
+    <NavigationButton text="" (tap)="goBack()" android.systemIcon="ic_menu_back">
+    </NavigationButton>
+</ActionBar>
+<PDFViewNg [src]="dataService.pdfURL"></PDFViewNg>

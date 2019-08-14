@@ -7,6 +7,8 @@
         <Button class="btn btn-primary btn-active icon" [isEnabled]="enabled" row="0" col="2" text="&#xea42;"
             (tap)="goForward()"></Button>
     </GridLayout> -->
+
     <WebView row="0" #myWebView [src]="url"></WebView>
+    <ns-spinner *ngIf="loading" row="0"></ns-spinner>
     <!-- <Label row="1" #labelResult></Label> -->
 </GridLayout>

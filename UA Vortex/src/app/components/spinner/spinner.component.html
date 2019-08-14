@@ -1,0 +1,9 @@
+<StackLayout [visibility]="dataService.spinnerInit ? 'visible' : 'collapsed'" class="background middle">
+    <Image #logo class="container middle" stretch="aspectFit" src="~/images/spinner.png">
+    </Image>
+</StackLayout>
+
+<StackLayout [visibility]="!dataService.spinnerInit ? 'visible' : 'collapsed'" class="loading middle">
+    <Image #logoSmall class="container middle" stretch="aspectFit" src="~/images/spinner.png">
+    </Image>
+</StackLayout>
