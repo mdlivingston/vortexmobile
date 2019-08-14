@@ -12,26 +12,31 @@ export class WebviewComponent implements OnInit {
     @ViewChild("myWebView", { static: false }) webViewRef: ElementRef;
     @Input() url: string = 'https://universityofalabama.az1.qualtrics.com/jfe/form/SV_eCJWZMO9MTB6AHr';
 
-    loading = true;
+    loading = false;
     constructor() { }
 
     ngOnInit() {
 
     }
-    ngAfterViewInit() {
-        let webview: WebView = this.webViewRef.nativeElement;
+    public onLoadStarted(args: LoadEventData) {
 
-
-        webview.on(WebView.loadFinishedEvent, (args: LoadEventData) => {
-            this.loading = false;
-            let message;
-            if (!args.error) {
-                message = "WebView finished loading of " + args.url;
-
-            } else {
-                message = "Error loading " + args.url + ": " + args.error;
-            }
-            console.log("WebView message - " + message);
-        });
+        this.loading = true;
+        let message;
+        if (!args.error) {
+            message = "WebView started loading of " + args.url;
+        } else {
+            message = "Error loading " + args.url + ": " + args.error;
+        }
+        console.log(message);
+    }
+    public onLoadFinished(args: LoadEventData) {
+        this.loading = false;
+        let message;
+        if (!args.error) {
+            message = "WebView finished loading of " + args.url;
+        } else {
+            message = "Error loading " + args.url + ": " + args.error;
+        }
+        console.log(message);
     }
 }

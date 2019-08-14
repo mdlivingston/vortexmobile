@@ -18,7 +18,7 @@ export class SpinnerComponent implements OnInit {
     ngOnInit() {
         setTimeout(() => {
             this.dataService.spinnerInit ? this.animateStart(this.logo.nativeElement) : this.animateStart(this.logoSmall.nativeElement);
-        }, 500);
+        }, 0);
 
     }
     animateStart(image: Image) {
@@ -27,8 +27,8 @@ export class SpinnerComponent implements OnInit {
             //backgroundColor: new Color("Blue"),
             //translate: { x: 0, y: 0 },
             //scale: { x: 2, y: 2 },
-            rotate: 360,
-            duration: 2000,
+            rotate: 100,
+            duration: this.dataService.spinnerInit ? 2000 : 10000,
             //delay: 20,
             //iterations: 5,
             //curve: enums.AnimationCurve.easeIn

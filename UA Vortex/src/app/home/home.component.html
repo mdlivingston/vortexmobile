@@ -1,6 +1,6 @@
 <ActionBar class="action-bar">
-    <Label class="header" text="UA Vortex"></Label>
-    <ActionItem ios.position="right" android.position="actionBar">
+    <Label class="header" [text]="!settingsFlag ? 'UA Vortex' : 'Settings'"></Label>
+    <ActionItem (tap)="goToSettings()" ios.position="right" android.position="actionBar">
         <Label class="fas" android:style="padding-right: 15" text="&#xf085;"></Label>
     </ActionItem>
 </ActionBar>
@@ -27,6 +27,8 @@
         </StackLayout>
     </GridLayout>
 
+
+
     <Image [nsRouterLink]="['/prepare']" pageTransition="slideLeft" class="container" col="0" row="2"
         stretch="aspectFill" src="~/images/prepare.jpg">
     </Image>
@@ -43,5 +45,9 @@
         <StackLayout class="title">
             <Label text="Stay Informed"></Label>
         </StackLayout>
+    </GridLayout>
+    <GridLayout class="settings" col="0" rowSpan="4" #settings>
+        <MDButton (tap)="goToSettings()" class="mat-button p-20" color="white" rippleColor="white" text="Close">
+        </MDButton>
     </GridLayout>
 </GridLayout>

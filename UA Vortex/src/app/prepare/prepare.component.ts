@@ -21,25 +21,25 @@ export class PrepareComponent implements OnInit {
         switch (type) {
             case 'flood': {
                 this.dataSevice.pdfTitle = 'Flood Safety';
-                this.dataSevice.pdfURL = 'http://lifestyleapi.caps.ua.edu/floodsafety';
+                this.dataSevice.pdfURL = '~/assets/FloodSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'heat': {
                 this.dataSevice.pdfTitle = 'Heat Safety';
-                this.dataSevice.pdfURL = 'http://lifestyleapi.caps.ua.edu/heatsafety';
+                this.dataSevice.pdfURL = '~/assets/HeatSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'thunder': {
                 this.dataSevice.pdfTitle = 'Thunderstorm Safety';
-                this.dataSevice.pdfURL = 'http://lifestyleapi.caps.ua.edu/thunderstormsafety';
+                this.dataSevice.pdfURL = '~/assets/ThunderstormSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'tornado': {
                 this.dataSevice.pdfTitle = 'Tornado Safety';
-                this.dataSevice.pdfURL = 'http://lifestyleapi.caps.ua.edu/tornadosafety';
+                this.dataSevice.pdfURL = '~/assets/TornadoSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }

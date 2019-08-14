@@ -32,3 +32,15 @@
 .activity-color {
   background-color: #be4bdb;
 }
+.settings {
+  transform: translateY(-5000);
+  background-color: #2e1ae0;
+  height: 100%;
+}
+.mat-button {
+  font-size: 22;
+  height: 40;
+  width: 40%;
+  vertical-align: bottom;
+  background-color: black;
+}

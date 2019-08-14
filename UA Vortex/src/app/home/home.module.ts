@@ -6,11 +6,13 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular/listview-directives";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptMaterialButtonModule } from 'nativescript-material-button/angular';
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        NativeScriptMaterialButtonModule
     ],
     declarations: [
         HomeComponent
