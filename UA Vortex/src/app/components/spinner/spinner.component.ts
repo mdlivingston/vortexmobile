@@ -1,3 +1,4 @@
+import { Page } from 'tns-core-modules/ui/page/page';
 import { DataService } from './../../services/data.service';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -13,7 +14,11 @@ export class SpinnerComponent implements OnInit {
     @ViewChild('logo', { static: true }) logo;
     @ViewChild('logoSmall', { static: true }) logoSmall;
     pageTransitionBottom: NavigationTransition = { name: 'slideBottom', duration: 500 }
-    constructor(private router: RouterExtensions, public dataService: DataService) { }
+    constructor(private router: RouterExtensions, public dataService: DataService, private page: Page) {
+        if (this.dataService.spinnerInit) {
+            this.page.actionBarHidden = true;
+        }
+    }
 
     ngOnInit() {
         setTimeout(() => {
@@ -27,8 +32,8 @@ export class SpinnerComponent implements OnInit {
             //backgroundColor: new Color("Blue"),
             //translate: { x: 0, y: 0 },
             //scale: { x: 2, y: 2 },
-            rotate: 100,
-            duration: this.dataService.spinnerInit ? 2000 : 10000,
+            rotate: 360,
+            duration: this.dataService.spinnerInit ? 500 : 10000,
             //delay: 20,
             //iterations: 5,
             //curve: enums.AnimationCurve.easeIn

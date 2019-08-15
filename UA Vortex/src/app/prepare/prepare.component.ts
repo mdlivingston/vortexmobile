@@ -1,3 +1,4 @@
+import { Page } from 'tns-core-modules/ui/page/page';
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -11,35 +12,40 @@ export class PrepareComponent implements OnInit {
 
     constructor(
         public routerExtensions: RouterExtensions,
-        private dataSevice: DataService) { }
+        private dataService: DataService,
+        private page: Page) { }
 
 
     ngOnInit() {
+        const safeAreaInsets = this.dataService.getSafeAreaInsets();
+        if (safeAreaInsets) {
+            this.page.marginBottom = -1 * safeAreaInsets.bottom;
+        }
     }
 
     goToPDF(type) {
         switch (type) {
             case 'flood': {
-                this.dataSevice.pdfTitle = 'Flood Safety';
-                this.dataSevice.pdfURL = '~/assets/FloodSafety.pdf';
+                this.dataService.pdfTitle = 'Flood Safety';
+                this.dataService.pdfURL = '~/assets/FloodSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'heat': {
-                this.dataSevice.pdfTitle = 'Heat Safety';
-                this.dataSevice.pdfURL = '~/assets/HeatSafety.pdf';
+                this.dataService.pdfTitle = 'Heat Safety';
+                this.dataService.pdfURL = '~/assets/HeatSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'thunder': {
-                this.dataSevice.pdfTitle = 'Thunderstorm Safety';
-                this.dataSevice.pdfURL = '~/assets/ThunderstormSafety.pdf';
+                this.dataService.pdfTitle = 'Thunderstorm Safety';
+                this.dataService.pdfURL = '~/assets/ThunderstormSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }
             case 'tornado': {
-                this.dataSevice.pdfTitle = 'Tornado Safety';
-                this.dataSevice.pdfURL = '~/assets/TornadoSafety.pdf';
+                this.dataService.pdfTitle = 'Tornado Safety';
+                this.dataService.pdfURL = '~/assets/TornadoSafety.pdf';
                 this.routerExtensions.navigate(['/pdf'], { animated: true })
                 break;
             }

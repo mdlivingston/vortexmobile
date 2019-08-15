@@ -2,20 +2,9 @@ import { WebView } from 'tns-core-modules/ui/web-view/web-view';
 import { DataService } from './../services/data.service';
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page/page";
-import * as application from "tns-core-modules/application";
+
 import { AnimationCurve } from "tns-core-modules/ui/enums";
-export function getSafeAreaInsets(): undefined | {
-    top: number,
-    left: number,
-    bottom: number,
-    right: number
-} {
-    if (application.ios && application.ios.window.safeAreaInsets) {
-        return application.ios.window.safeAreaInsets;
-    } else {
-        return undefined;
-    }
-}
+
 
 
 @Component({
@@ -36,7 +25,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
 
-        const safeAreaInsets = getSafeAreaInsets();
+        const safeAreaInsets = this.dataService.getSafeAreaInsets();
         if (safeAreaInsets) {
             this.page.marginBottom = -1 * safeAreaInsets.bottom;
         }
@@ -59,10 +48,10 @@ export class HomeComponent implements OnInit {
             this.settings.nativeElement.animate({
                 //opacity: 0,
                 //backgroundColor: new Color("Blue"),
-                translate: { x: 0, y: -5000 },
+                translate: { x: 0, y: -3000 },
                 //scale: { x: 2, y: 2 },
                 //rotate: 100,
-                duration: 2000,
+                duration: 500,
                 //delay: 20,
                 //iterations: 5,
                 curve: AnimationCurve.cubicBezier(0.1, 0.1, 0.1, 1)

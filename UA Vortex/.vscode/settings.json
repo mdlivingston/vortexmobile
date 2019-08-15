@@ -1,12 +1,12 @@
 {
     "xml.fileAssociations": [
         {
-            "systemId": "/Users/mlivingston/Git/UA%20Vortex/schema/tns.xsd",
+            "systemId": "/Users/mlivingston/Git/UA%20Vortex/UA%20Vortex/schema/tns.xsd",
             "pattern": "**/**/*.xml"
         },
         {
             "systemId": "http://www.w3.org/2001/XMLSchema.xsd",
-            "pattern": "/Users/mlivingston/Git/UA%20Vortex/schema/tns.xsd"
+            "pattern": "/Users/mlivingston/Git/UA%20Vortex/UA%20Vortex/schema/tns.xsd"
         }
     ],
     "files.exclude": {

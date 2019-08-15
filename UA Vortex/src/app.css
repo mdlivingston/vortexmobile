@@ -10,7 +10,7 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 
-@import "~nativescript-theme-core/css/core.dark.css";
+/* @import "~nativescript-theme-core/css/core.dark.css"; */
 
 /*
 For example, the following CSS rule changes the font size of all UI
@@ -100,8 +100,8 @@ components that have the btn class name.
 .action-bar {
   background-color: #000000;
   color: white;
-  border-color: rgb(29, 15, 224);
-  border-bottom-width: 0.5;
+  /* border-color: rgb(29, 15, 224);
+  border-bottom-width: 0.5; */
 }
 
 .font-red {

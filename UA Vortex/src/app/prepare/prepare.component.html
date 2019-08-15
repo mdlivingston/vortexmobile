@@ -1,21 +1,46 @@
 <ActionBar class="action-bar">
-    <Label class="header" text="Be Prepared"></Label>
+    <Label class="header" text="Safety"></Label>
     <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
     </NavigationButton>
 </ActionBar>
 
+<GridLayout backgroundColor="black" columns="*" rows="*,*,*,*">
+    <Image decodeWidth="400" decodeHeight="400" v (tap)="goToPDF('heat')" pageTransition="slideLeft" class="container"
+        col="0" row="0" stretch="aspectFill" src="~/images/sun.jpeg">
+    </Image>
+    <GridLayout (tap)="goToPDF('heat')" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Heat Safety"></Label>
+        </StackLayout>
+    </GridLayout>
 
-<StackLayout backgroundColor="black" class="middle" height="100%">
-    <MDButton (tap)="goToPDF('heat')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
-        text="Heat Safety"></MDButton>
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToPDF('flood')" pageTransition="slideLeft" class="container"
+        col="0" row="1" stretch="aspectFill" src="~/images/flood.jpeg">
+    </Image>
+    <GridLayout (tap)="goToPDF('flood')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Flood Safety"></Label>
+        </StackLayout>
+    </GridLayout>
 
-    <MDButton (tap)="goToPDF('flood')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
-        text="Flood Safety">
-    </MDButton>
-    <MDButton (tap)="goToPDF('tornado')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
-        text="Tornado Safety"></MDButton>
-    <MDButton (tap)="goToPDF('thunder')" class="fSize" color="#55c4e6" rippleColor="white" variant="text"
-        text="Thunderstorm Safety">
-    </MDButton>
 
-</StackLayout>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToPDF('tornado')" pageTransition="slideLeft" class="container"
+        col="0" row="2" stretch="aspectFill" src="~/images/tornado.jpeg">
+    </Image>
+    <GridLayout (tap)="goToPDF('tornado')" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Tornado Safety"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToPDF('thunder')" class="container" pageTransition="slideLeft"
+        col="0" row="3" stretch="aspectFill" src="~/images/tunderstorm.jpeg">
+    </Image>
+    <GridLayout (tap)="goToPDF('thunder')" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Thunderstorm Safety"></Label>
+        </StackLayout>
+    </GridLayout>
+
+</GridLayout>
