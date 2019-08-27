@@ -9,7 +9,8 @@
 
 
 <GridLayout rows="*" columns="*">
-    <GridLayout *ngIf="!dataService.tookSurvey" backgroundColor="black" columns="*" rows="225,*,*,*">
+    <GridLayout [visibility]="!dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
+        rows="225,*,*,*">
         <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']" pageTransition="slideLeft"
             class="container" col="0" row="0" stretch="aspectFill" src="~/images/survey.jpg">
         </Image>
@@ -51,7 +52,8 @@
 
     </GridLayout>
 
-    <GridLayout *ngIf="dataService.tookSurvey" backgroundColor="black" columns="*" rows="*,*,*">
+    <GridLayout [visibility]="dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
+        rows="*,*,*">
 
         <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
             class="container" col="0" row="0" stretch="aspectFill" src="~/images/storm.jpg">

@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit {
         this.settingsFlag ? this.settingsFlag = false : this.settingsFlag = true;
     }
     takenSurvey(event) {
-        console.log(event);
         this.dataService.tookSurvey ? this.dataService.tookSurvey = false : this.dataService.tookSurvey = true;
         appSettings.setBoolean('survey', this.dataService.tookSurvey);
     }

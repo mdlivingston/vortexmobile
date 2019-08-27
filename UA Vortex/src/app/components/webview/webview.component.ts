@@ -31,6 +31,8 @@ export class WebviewComponent implements OnInit {
     }
     public onLoadFinished(args: LoadEventData) {
         this.loading = false;
+
+        console.log(this.webViewRef.nativeElement.ios)
         let message;
         if (!args.error) {
             message = "WebView finished loading of " + args.url;
