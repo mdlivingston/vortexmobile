@@ -6,7 +6,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { isAndroid } from 'tns-core-modules/ui/page/page';
 
 const routes: Routes = [
-    { path: "", redirectTo: isAndroid ? "/home" : "/spinner", pathMatch: "full" },
+    { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "spinner", component: SpinnerComponent },
     { path: "pdf", component: PdfviewComponent },
     { path: "home", loadChildren: "~/app/home/home.module#HomeModule" },

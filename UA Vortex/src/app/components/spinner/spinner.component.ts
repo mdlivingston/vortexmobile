@@ -15,9 +15,7 @@ export class SpinnerComponent implements OnInit {
     @ViewChild('logoSmall', { static: true }) logoSmall;
     pageTransitionBottom: NavigationTransition = { name: 'slideBottom', duration: 500 }
     constructor(private router: RouterExtensions, public dataService: DataService, private page: Page) {
-        if (this.dataService.spinnerInit) {
-            this.page.actionBarHidden = true;
-        }
+
     }
 
     ngOnInit() {

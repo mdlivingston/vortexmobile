@@ -8,46 +8,86 @@
 
 
 
-<GridLayout backgroundColor="black" columns="*" rows="225,*,*,*">
-    <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']" pageTransition="slideLeft"
-        class="container" col="0" row="0" stretch="aspectFill" src="~/images/survey.jpg">
-    </Image>
-    <GridLayout [nsRouterLink]="['/survey']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Take the Survey"></Label>
-        </StackLayout>
+<GridLayout rows="*" columns="*">
+    <GridLayout *ngIf="!dataService.tookSurvey" backgroundColor="black" columns="*" rows="225,*,*,*">
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']" pageTransition="slideLeft"
+            class="container" col="0" row="0" stretch="aspectFill" src="~/images/survey.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/survey']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Take the Survey"></Label>
+            </StackLayout>
+        </GridLayout>
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
+            class="container" col="0" row="1" stretch="aspectFill" src="~/images/storm.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Report Severe Weather"></Label>
+            </StackLayout>
+        </GridLayout>
+
+
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
+            class="container" col="0" row="2" stretch="aspectFill" src="~/images/prepare.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Prepare"></Label>
+            </StackLayout>
+        </GridLayout>
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
+            pageTransition="slideLeft" col="0" row="3" stretch="aspectFill" src="~/images/tv.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="3"
+            verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Stay Informed"></Label>
+            </StackLayout>
+        </GridLayout>
+
     </GridLayout>
 
-    <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
-        class="container" col="0" row="1" stretch="aspectFill" src="~/images/storm.jpg">
-    </Image>
-    <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Report Severe Weather"></Label>
-        </StackLayout>
+    <GridLayout *ngIf="dataService.tookSurvey" backgroundColor="black" columns="*" rows="*,*,*">
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
+            class="container" col="0" row="0" stretch="aspectFill" src="~/images/storm.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Report Severe Weather"></Label>
+            </StackLayout>
+        </GridLayout>
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
+            class="container" col="0" row="1" stretch="aspectFill" src="~/images/prepare.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Prepare"></Label>
+            </StackLayout>
+        </GridLayout>
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
+            pageTransition="slideLeft" col="0" row="2" stretch="aspectFill" src="~/images/tv.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="2"
+            verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Stay Informed"></Label>
+            </StackLayout>
+        </GridLayout>
+
     </GridLayout>
-
-
-
-    <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
-        class="container" col="0" row="2" stretch="aspectFill" src="~/images/prepare.jpg">
-    </Image>
-    <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Prepare"></Label>
-        </StackLayout>
-    </GridLayout>
-
-    <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
-        pageTransition="slideLeft" col="0" row="3" stretch="aspectFill" src="~/images/tv.jpg">
-    </Image>
-    <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Stay Informed"></Label>
-        </StackLayout>
-    </GridLayout>
-    <GridLayout class="settings" col="0" rowSpan="4" #settings>
-        <MDButton (tap)="goToSettings()" class="mat-button p-20" color="white" rippleColor="white" text="Close">
+    <GridLayout class="settings " rowSpan="1" rows="*" columns="*,*" #settings>
+        <Label class="center" col="0" text="Survey Taken?"></Label>
+        <Switch col="1" checked="{{dataService.tookSurvey}}" class="center" (checkedChange)="takenSurvey($event)">
+        </Switch>
+        <MDButton (tap)="goToSettings()" colSpan="2" class="mat-button p-b-40" color="white" rippleColor="white"
+            text="Close">
         </MDButton>
     </GridLayout>
 </GridLayout>

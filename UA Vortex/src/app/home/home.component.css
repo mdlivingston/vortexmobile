@@ -34,9 +34,9 @@
 }
 .settings {
   transform: translateY(-5000);
-  background-color: #2e1ae0;
+  background-color: #d1d1d4;
   /* height: 100%; */
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 .mat-button {
   font-size: 12;
