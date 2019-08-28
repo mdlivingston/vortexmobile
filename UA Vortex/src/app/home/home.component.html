@@ -10,7 +10,7 @@
 
 <GridLayout rows="*" columns="*">
     <GridLayout [visibility]="!dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
-        rows="225,*,*,*">
+        rows="200,*,*,*,*">
         <Image backgroundColor="lightgray" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']"
             pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/caps.png">
         </Image>
@@ -20,19 +20,68 @@
             </StackLayout>
         </GridLayout>
 
-        <Image decodeWidth="400" decodeHeight="400" (tap)="reportWeather()" class="container" col="0" row="1"
-            stretch="aspectFill" src="~/images/storm.jpg">
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
+            pageTransition="slideLeft" col="0" row="1" stretch="aspectFill" src="~/images/tv.jpg">
         </Image>
-        <GridLayout (tap)="reportWeather()" col="0" row="1" verticalAlignment="bottom">
+        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="1"
+            verticalAlignment="bottom">
             <StackLayout class="title">
-                <Label text="Report Severe Weather"></Label>
+                <Label text="Stay Informed"></Label>
             </StackLayout>
         </GridLayout>
 
 
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/shelter']" pageTransition="slideLeft"
+            class="container" col="0" row="2" stretch="aspectFill" src="~/images/prepare.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/shelter']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Shelter"></Label>
+            </StackLayout>
+        </GridLayout>
 
         <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
-            class="container" col="0" row="2" stretch="aspectFill" src="~/images/prepare.jpg">
+            class="container" col="0" row="3" stretch="aspectFill" src="~/images/ready.png">
+        </Image>
+        <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Prepare"></Label>
+            </StackLayout>
+        </GridLayout>
+
+        <Image decodeWidth="400" decodeHeight="400" (tap)="reportWeather()" class="container" col="0" row="4"
+            stretch="aspectFill" src="~/images/storm.jpg">
+        </Image>
+        <GridLayout (tap)="reportWeather()" col="0" row="4" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Report Severe Weather"></Label>
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
+
+    <GridLayout [visibility]="dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
+        rows="*,*,*,*">
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
+            pageTransition="slideLeft" col="0" row="0" stretch="aspectFill" src="~/images/tv.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="0"
+            verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Stay Informed"></Label>
+            </StackLayout>
+        </GridLayout>
+
+
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/shelter']" pageTransition="slideLeft"
+            class="container" col="0" row="1" stretch="aspectFill" src="~/images/prepare.jpg">
+        </Image>
+        <GridLayout [nsRouterLink]="['/shelter']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+            <StackLayout class="title">
+                <Label text="Shelter"></Label>
+            </StackLayout>
+        </GridLayout>
+        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
+            class="container" col="0" row="2" stretch="aspectFill" src="~/images/ready.png">
         </Image>
         <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
             <StackLayout class="title">
@@ -40,46 +89,12 @@
             </StackLayout>
         </GridLayout>
 
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
-            pageTransition="slideLeft" col="0" row="3" stretch="aspectFill" src="~/images/tv.jpg">
-        </Image>
-        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="3"
-            verticalAlignment="bottom">
-            <StackLayout class="title">
-                <Label text="Stay Informed"></Label>
-            </StackLayout>
-        </GridLayout>
-
-    </GridLayout>
-
-    <GridLayout [visibility]="dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
-        rows="*,*,*">
-
         <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
-            class="container" col="0" row="0" stretch="aspectFill" src="~/images/storm.jpg">
+            class="container" col="0" row="3" stretch="aspectFill" src="~/images/storm.jpg">
         </Image>
-        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
             <StackLayout class="title">
                 <Label text="Report Severe Weather"></Label>
-            </StackLayout>
-        </GridLayout>
-
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/prepare']" pageTransition="slideLeft"
-            class="container" col="0" row="1" stretch="aspectFill" src="~/images/prepare.jpg">
-        </Image>
-        <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
-            <StackLayout class="title">
-                <Label text="Prepare"></Label>
-            </StackLayout>
-        </GridLayout>
-
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed']" class="container"
-            pageTransition="slideLeft" col="0" row="2" stretch="aspectFill" src="~/images/tv.jpg">
-        </Image>
-        <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="2"
-            verticalAlignment="bottom">
-            <StackLayout class="title">
-                <Label text="Stay Informed"></Label>
             </StackLayout>
         </GridLayout>
 

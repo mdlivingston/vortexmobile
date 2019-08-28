@@ -1,24 +1,62 @@
 <ActionBar class="action-bar">
-    <Label class="header" text="Stay Informed"></Label>
+    <Label class="header" text="Links"></Label>
     <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
     </NavigationButton>
 </ActionBar>
 
-<StackLayout height="100%" width="95%">
 
-    <Label textWrap="true" text="Links" height="100" fontSize="22" class="center"></Label>
+<GridLayout backgroundColor="black" columns="*" rows="*,*,*,*,*,*">
+
+    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('uasafety')"
+        pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/uasafety.jpg">
+    </Image>
+    <GridLayout (tap)="goToLink('uasafety')" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Tips"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('algo')" pageTransition="slideLeft" class="container"
+        col="0" row="1" stretch="aspectFit" src="~/images/algo.png">
+    </Image>
+    <GridLayout (tap)="goToLink('algo')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text=""></Label>
+        </StackLayout>
+    </GridLayout>
 
 
-    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('uasafety')"
-        text="UA Safety App"></Label>
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('radio')" pageTransition="slideLeft" class="container"
+        col="0" row="2" stretch="aspectFill" src="~/images/radio.jpg">
+    </Image>
+    <GridLayout (tap)="goToLink('radio')" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Weather Radio"></Label>
+        </StackLayout>
+    </GridLayout>
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('weather')" pageTransition="slideLeft" class="container"
+        col="0" row="3" stretch="aspectFit" src="~/images/info.png">
+    </Image>
+    <GridLayout (tap)="goToLink('weather')" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Weather Links"></Label>
+        </StackLayout>
+    </GridLayout>
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('tusc')" pageTransition="slideLeft" class="container"
+        col="0" row="4" stretch="aspectFill" src="~/images/tusc.jpg">
+    </Image>
+    <GridLayout (tap)="goToLink('tusc')" pageTransition="slideLeft" col="0" row="4" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="TuscAlert"></Label>
+        </StackLayout>
+    </GridLayout>
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('trends')" pageTransition="slideLeft" class="container"
+        col="0" row="5" stretch="aspectFill" src="~/images/trends.jpg">
+    </Image>
+    <GridLayout (tap)="goToLink('trends')" pageTransition="slideLeft" col="0" row="5" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Weather Trends"></Label>
+        </StackLayout>
+    </GridLayout>
 
-    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('algo')"
-        text="ALGO Traffic App"></Label>
-
-    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('weather')"
-        text="Weather Information Sites"></Label>
-
-    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('radio')"
-        text="Weather Radio"></Label>
-
-</StackLayout>
+</GridLayout>

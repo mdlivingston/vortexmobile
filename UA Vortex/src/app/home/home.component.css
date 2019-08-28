@@ -12,26 +12,11 @@
 
 .title {
   padding: 8 16 8 8;
-  font-size: 28;
+  font-size: 24;
   color: #fff;
   font-family: "Nunito";
 }
 
-.blood-color {
-  background-color: #cc0c0c;
-}
-
-.medicine-color {
-  background-color: #82c91e;
-}
-
-.weight-color {
-  background-color: #fd7e14;
-}
-
-.activity-color {
-  background-color: #be4bdb;
-}
 .settings {
   transform: translateY(-5000);
   background-color: #d1d1d4;

@@ -14,6 +14,7 @@ const routes: Routes = [
     { path: "informed", loadChildren: "~/app/informed/informed.module#InformedModule" },
     { path: "prepare", loadChildren: "~/app/prepare/prepare.module#PrepareModule" },
     { path: "severe", loadChildren: "~/app/severe/severe.module#SevereModule" },
+    { path: "shelter", loadChildren: "~/app/shelter/shelter.module#ShelterModule" },
 ];
 
 @NgModule({

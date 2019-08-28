@@ -1,0 +1,28 @@
+<ActionBar class="action-bar">
+    <Label class="header" text="Shelter"></Label>
+    <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
+    </NavigationButton>
+</ActionBar>
+
+<GridLayout backgroundColor="black" columns="*" rows="*,*">
+
+    <Image decodeWidth="400" decodeHeight="400" v (tap)="goToLink('tips')" pageTransition="slideLeft" class="container"
+        col="0" row="0" stretch="aspectFill" src="~/images/tips.jpeg">
+    </Image>
+    <GridLayout (tap)="goToLink('tips')" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Tips"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('tuscaloosa')" pageTransition="slideLeft"
+        class="container" col="0" row="1" stretch="aspectFill" src="~/images/map.png">
+    </Image>
+    <GridLayout (tap)="goToLink('tuscaloosa')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Locations"></Label>
+        </StackLayout>
+    </GridLayout>
+
+
+</GridLayout>
