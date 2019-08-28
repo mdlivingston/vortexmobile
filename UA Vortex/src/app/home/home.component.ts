@@ -4,7 +4,7 @@ import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page/page";
 import { AnimationCurve } from "tns-core-modules/ui/enums";
 import * as appSettings from "tns-core-modules/application-settings";
-
+import * as utils from "tns-core-modules/utils/utils";
 
 @Component({
     selector: "Home",
@@ -29,6 +29,9 @@ export class HomeComponent implements OnInit {
             this.page.marginBottom = -1 * safeAreaInsets.bottom;
         }
 
+    }
+    reportWeather() {
+        utils.openUrl("https://www.weather.gov/bmx/submit_storm_report");
     }
     goToSettings() {
         if (!this.settingsFlag) {

@@ -61,10 +61,6 @@ components that have the btn class name.
   font-family: "Nunito";
 }
 
-.reg-font {
-  font-family: "Nunito";
-}
-
 .btn-primary:disabled {
   opacity: 0.5;
 }

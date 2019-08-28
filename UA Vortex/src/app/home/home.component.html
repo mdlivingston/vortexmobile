@@ -1,5 +1,5 @@
 <ActionBar class="action-bar">
-    <Label class="header" [text]="!settingsFlag ? 'UA Vortex' : 'Settings'"></Label>
+    <Label class="header" [text]="!settingsFlag ? 'VORTEX' : 'Settings'"></Label>
     <ActionItem (tap)="goToSettings()" ios.position="right" android.position="actionBar">
         <Label class="fas" android:style="padding-right: 15" text="&#xf085;"></Label>
     </ActionItem>
@@ -11,19 +11,19 @@
 <GridLayout rows="*" columns="*">
     <GridLayout [visibility]="!dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
         rows="225,*,*,*">
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']" pageTransition="slideLeft"
-            class="container" col="0" row="0" stretch="aspectFill" src="~/images/survey.jpg">
+        <Image backgroundColor="lightgray" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']"
+            pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/caps.png">
         </Image>
         <GridLayout [nsRouterLink]="['/survey']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
-            <StackLayout class="title">
-                <Label text="Take the Survey"></Label>
+            <StackLayout class="title font-black">
+                <Label text="Survey"></Label>
             </StackLayout>
         </GridLayout>
 
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
-            class="container" col="0" row="1" stretch="aspectFill" src="~/images/storm.jpg">
+        <Image decodeWidth="400" decodeHeight="400" (tap)="reportWeather()" class="container" col="0" row="1"
+            stretch="aspectFill" src="~/images/storm.jpg">
         </Image>
-        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
+        <GridLayout (tap)="reportWeather()" col="0" row="1" verticalAlignment="bottom">
             <StackLayout class="title">
                 <Label text="Report Severe Weather"></Label>
             </StackLayout>

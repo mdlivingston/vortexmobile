@@ -3,3 +3,22 @@
     <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
     </NavigationButton>
 </ActionBar>
+
+<StackLayout height="100%" width="95%">
+
+    <Label textWrap="true" text="Links" height="100" fontSize="22" class="center"></Label>
+
+
+    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('uasafety')"
+        text="UA Safety App"></Label>
+
+    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('algo')"
+        text="ALGO Traffic App"></Label>
+
+    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('weather')"
+        text="Weather Information Sites"></Label>
+
+    <Label textWrap="true" height="50" class="p-10 p-b-20 reg-font  underline left" (tap)="goToLink('radio')"
+        text="Weather Radio"></Label>
+
+</StackLayout>
