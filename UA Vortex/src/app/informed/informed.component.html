@@ -1,62 +1,31 @@
 <ActionBar class="action-bar">
-    <Label class="header" text="Links"></Label>
-    <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
+    <Label class="header" text="Stay Informed"></Label>
+    <NavigationButton text="Home" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
     </NavigationButton>
 </ActionBar>
 
 
-<GridLayout backgroundColor="black" columns="*" rows="*,*,*,*,*,*">
+<GridLayout backgroundColor="black" columns="*" rows="*,*">
 
-    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('uasafety')"
-        pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/uasafety.jpg">
+    <Image backgroundColor="black" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed/mobile-apps']"
+        pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/mobileapps.png">
     </Image>
-    <GridLayout (tap)="goToLink('uasafety')" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
+    <GridLayout [nsRouterLink]="['/informed/mobile-apps']" pageTransition="slideLeft" col="0" row="0"
+        verticalAlignment="bottom">
         <StackLayout class="title">
-            <Label text="Tips"></Label>
-        </StackLayout>
-    </GridLayout>
-
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('algo')" pageTransition="slideLeft" class="container"
-        col="0" row="1" stretch="aspectFit" src="~/images/algo.png">
-    </Image>
-    <GridLayout (tap)="goToLink('algo')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text=""></Label>
+            <Label text="Mobile Apps"></Label>
         </StackLayout>
     </GridLayout>
 
+    <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed/links']" pageTransition="slideLeft"
+        class="container" col="0" row="1" stretch="aspectFill" src="~/images/links.jpg">
+    </Image>
+    <GridLayout [nsRouterLink]="['/informed/links']" pageTransition="slideLeft" col="0" row="1"
+        verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Resource Links"></Label>
+        </StackLayout>
+    </GridLayout>
 
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('radio')" pageTransition="slideLeft" class="container"
-        col="0" row="2" stretch="aspectFill" src="~/images/radio.jpg">
-    </Image>
-    <GridLayout (tap)="goToLink('radio')" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Weather Radio"></Label>
-        </StackLayout>
-    </GridLayout>
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('weather')" pageTransition="slideLeft" class="container"
-        col="0" row="3" stretch="aspectFit" src="~/images/info.png">
-    </Image>
-    <GridLayout (tap)="goToLink('weather')" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Weather Links"></Label>
-        </StackLayout>
-    </GridLayout>
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('tusc')" pageTransition="slideLeft" class="container"
-        col="0" row="4" stretch="aspectFill" src="~/images/tusc.jpg">
-    </Image>
-    <GridLayout (tap)="goToLink('tusc')" pageTransition="slideLeft" col="0" row="4" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="TuscAlert"></Label>
-        </StackLayout>
-    </GridLayout>
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('trends')" pageTransition="slideLeft" class="container"
-        col="0" row="5" stretch="aspectFill" src="~/images/trends.jpg">
-    </Image>
-    <GridLayout (tap)="goToLink('trends')" pageTransition="slideLeft" col="0" row="5" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Weather Trends"></Label>
-        </StackLayout>
-    </GridLayout>
 
 </GridLayout>

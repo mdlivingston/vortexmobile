@@ -1,0 +1,17 @@
+<ActionBar class="action-bar">
+    <Label class="header" text="Mobile Apps"></Label>
+    <NavigationButton text="" (tap)="routerExtensions.back()" android.systemIcon="ic_menu_back">
+    </NavigationButton>
+</ActionBar>
+
+
+<GridLayout backgroundColor="black" columns="*" rows="*,*">
+    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('uasafety')"
+        pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/uasafety.jpg">
+    </Image>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('algo')" pageTransition="slideLeft" class="container"
+        col="0" row="1" stretch="aspectFit" src="~/images/algo.png">
+    </Image>
+
+</GridLayout>

@@ -1,16 +1,18 @@
 <ActionBar class="action-bar">
-    <Label class="header" [text]="!settingsFlag ? 'VORTEX' : 'Settings'"></Label>
+    <ActionItem (tap)="goToInfo()" ios.position="left" android.position="actionBar">
+        <Label height="100%" width="30" class="fas" text="&#xf05a;"></Label>
+    </ActionItem>
+    <Label class="header" [text]="'VORTEX'"></Label>
+
     <ActionItem (tap)="goToSettings()" ios.position="right" android.position="actionBar">
-        <Label class="fas" android:style="padding-right: 15" text="&#xf085;"></Label>
+        <Label height="100%" width="30" class="fas" text="&#xf085;"></Label>
     </ActionItem>
 </ActionBar>
 
 
-
-
 <GridLayout rows="*" columns="*">
     <GridLayout [visibility]="!dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
-        rows="200,*,*,*,*">
+        rows="180,*,*,*,*">
         <Image backgroundColor="lightgray" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']"
             pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/caps.png">
         </Image>
@@ -89,22 +91,33 @@
             </StackLayout>
         </GridLayout>
 
-        <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/severe']" pageTransition="slideLeft"
-            class="container" col="0" row="3" stretch="aspectFill" src="~/images/storm.jpg">
+        <Image decodeWidth="400" decodeHeight="400" (tap)="reportWeather()" class="container" col="0" row="3"
+            stretch="aspectFill" src="~/images/storm.jpg">
         </Image>
-        <GridLayout [nsRouterLink]="['/severe']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
+        <GridLayout (tap)="reportWeather()" col="0" row="3" verticalAlignment="bottom">
             <StackLayout class="title">
                 <Label text="Report Severe Weather"></Label>
             </StackLayout>
         </GridLayout>
 
     </GridLayout>
-    <GridLayout class="settings " rowSpan="1" rows="*" columns="*,*" #settings>
-        <Label class="center" col="0" text="Survey Taken?"></Label>
+    <GridLayout class="settings" rowSpan="1" rows="*, auto" columns="*,100" #settings>
+        <Label class="center middle" col="0" text="Survey Completed?"></Label>
         <Switch col="1" checked="{{dataService.tookSurvey}}" class="center" (checkedChange)="takenSurvey($event)">
         </Switch>
-        <MDButton (tap)="goToSettings()" colSpan="2" class="mat-button p-b-40" color="white" rippleColor="white"
+
+        <MDButton (tap)="goToSettings()" row="1" colSpan="2" class="mat-button" color="white" rippleColor="white"
             text="Close">
+        </MDButton>
+    </GridLayout>
+
+    <GridLayout class="info " rowSpan="1" rows="30, *,auto,auto" columns="*" #info>
+        <Label row="0" class="center  underline bold" textWrap="true" text="About"></Label>
+        <Label row="1" class="center" width="95%" textWrap="true"
+            text="The UA Vortex app was developed by the Center for Advanced Public Safety as part of the University of Alabama's ongoing research project titled  &quot;Human Behavior Before, During, and After Severe Weather Events: In-Situ Observations in the U.S. Southeast.&quot; "></Label>
+        <Label class="center" row="2" width="95%" textWrap="true"
+            text="This app contains a one-time, optional survey and severe weather outreach and safety material designed for residents of Tuscaloosa County, Alabama."></Label>
+        <MDButton (tap)="goToInfo()" row="3" class="mat-button p-b-40" color="white" rippleColor="white" text="Close">
         </MDButton>
     </GridLayout>
 </GridLayout>
