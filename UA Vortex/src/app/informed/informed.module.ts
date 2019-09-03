@@ -14,6 +14,7 @@ import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
     imports: [
         NativeScriptCommonModule,
         InformedRoutingModule,
+        NativeScriptFormsModule,
     ],
     declarations: [
         InformedComponent,

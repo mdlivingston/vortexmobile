@@ -5,7 +5,7 @@
 </ActionBar>
 
 
-<GridLayout backgroundColor="black" columns="*" rows="*,*">
+<GridLayout backgroundColor="black" columns="*" rows="*,*,*">
 
     <Image backgroundColor="black" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed/mobile-apps']"
         pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/mobileapps.png">
@@ -18,7 +18,7 @@
     </GridLayout>
 
     <Image decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/informed/links']" pageTransition="slideLeft"
-        class="container" col="0" row="1" stretch="aspectFill" src="~/images/links.jpg">
+        class="container" col="0" row="1" stretch="aspectFill" src="~/images/links.jpeg">
     </Image>
     <GridLayout [nsRouterLink]="['/informed/links']" pageTransition="slideLeft" col="0" row="1"
         verticalAlignment="bottom">
@@ -27,5 +27,27 @@
         </StackLayout>
     </GridLayout>
 
+    <Image (tap)="openEmail()" decodeWidth="400" decodeHeight="400" class="container" col="0" row="2"
+        stretch="aspectFill" src="~/images/radio2.jpeg">
+    </Image>
+    <GridLayout (tap)="openEmail()" col="0" row="2" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Need A Radio?"></Label>
+        </StackLayout>
+    </GridLayout>
 
+    <StackLayout rowSpan="3" #email class="email center top">
+        <GridLayout rows="50, *, 75" columns="150, *" class="form">
+            <Label colSpan="2" text="Contact Us" class="center"></Label>
+
+            <Label row="1" colSpan="2" textWrap="true"
+                text="Is it okay if we take you to the mail app so that you can contact us?"
+                class="center middle"></Label>
+
+            <Button row="2" col="0" text="No" (tap)="closeEmail()" backgroundColor="darkgray"
+                class="font-white bottom"></Button>
+            <Button row="2" col="1" text="Yes" (tap)="sendEmail()" backgroundColor="#a41c38"
+                class="font-white bottom"></Button>
+        </GridLayout>
+    </StackLayout>
 </GridLayout>

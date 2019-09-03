@@ -2,7 +2,7 @@
     <ActionItem (tap)="goToInfo()" ios.position="left" android.position="actionBar">
         <Label height="100%" width="30" class="fas" text="&#xf05a;"></Label>
     </ActionItem>
-    <Label class="header" [text]="'VORTEX'"></Label>
+    <Label class="header" [text]="'UA VORTEX'"></Label>
 
     <ActionItem (tap)="goToSettings()" ios.position="right" android.position="actionBar">
         <Label height="100%" width="30" class="fas" text="&#xf085;"></Label>
@@ -13,12 +13,12 @@
 <GridLayout rows="*" columns="*">
     <GridLayout [visibility]="!dataService.tookSurvey ? 'visible' : 'collapsed'" backgroundColor="black" columns="*"
         rows="180,*,*,*,*">
-        <Image backgroundColor="lightgray" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']"
+        <Image backgroundColor="darkgray" decodeWidth="400" decodeHeight="400" [nsRouterLink]="['/survey']"
             pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/caps.png">
         </Image>
         <GridLayout [nsRouterLink]="['/survey']" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
-            <StackLayout class="title font-black">
-                <Label text="Survey"></Label>
+            <StackLayout class="title font-white">
+                <Label text="Take Survey"></Label>
             </StackLayout>
         </GridLayout>
 
@@ -27,7 +27,7 @@
         </Image>
         <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="1"
             verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Stay Informed"></Label>
             </StackLayout>
         </GridLayout>
@@ -37,7 +37,7 @@
             class="container" col="0" row="2" stretch="aspectFill" src="~/images/prepare.jpg">
         </Image>
         <GridLayout [nsRouterLink]="['/shelter']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Shelter"></Label>
             </StackLayout>
         </GridLayout>
@@ -46,7 +46,7 @@
             class="container" col="0" row="3" stretch="aspectFill" src="~/images/ready.png">
         </Image>
         <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Prepare"></Label>
             </StackLayout>
         </GridLayout>
@@ -55,7 +55,7 @@
             stretch="aspectFill" src="~/images/storm.jpg">
         </Image>
         <GridLayout (tap)="reportWeather()" col="0" row="4" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Report Severe Weather"></Label>
             </StackLayout>
         </GridLayout>
@@ -68,7 +68,7 @@
         </Image>
         <GridLayout [nsRouterLink]="['/informed']" pageTransition="slideLeft" col="0" row="0"
             verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Stay Informed"></Label>
             </StackLayout>
         </GridLayout>
@@ -78,7 +78,7 @@
             class="container" col="0" row="1" stretch="aspectFill" src="~/images/prepare.jpg">
         </Image>
         <GridLayout [nsRouterLink]="['/shelter']" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Shelter"></Label>
             </StackLayout>
         </GridLayout>
@@ -86,7 +86,7 @@
             class="container" col="0" row="2" stretch="aspectFill" src="~/images/ready.png">
         </Image>
         <GridLayout [nsRouterLink]="['/prepare']" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Prepare"></Label>
             </StackLayout>
         </GridLayout>
@@ -95,7 +95,7 @@
             stretch="aspectFill" src="~/images/storm.jpg">
         </Image>
         <GridLayout (tap)="reportWeather()" col="0" row="3" verticalAlignment="bottom">
-            <StackLayout class="title">
+            <StackLayout class="title font-white">
                 <Label text="Report Severe Weather"></Label>
             </StackLayout>
         </GridLayout>
@@ -111,11 +111,11 @@
         </MDButton>
     </GridLayout>
 
-    <GridLayout class="info " rowSpan="1" rows="30, *,auto,auto" columns="*" #info>
-        <Label row="0" class="center  underline bold" textWrap="true" text="About"></Label>
-        <Label row="1" class="center" width="95%" textWrap="true"
+    <GridLayout class="info " rowSpan="1" rows="50, *,auto,auto" columns="*" #info>
+        <Label row="0" class="center middle  underline bold" textWrap="true" text="About"></Label>
+        <Label row="1" class="center " width="95%" textWrap="true"
             text="The UA Vortex app was developed by the Center for Advanced Public Safety as part of the University of Alabama's ongoing research project titled  &quot;Human Behavior Before, During, and After Severe Weather Events: In-Situ Observations in the U.S. Southeast.&quot; "></Label>
-        <Label class="center" row="2" width="95%" textWrap="true"
+        <Label class="center " row="2" width="95%" textWrap="true"
             text="This app contains a one-time, optional survey and severe weather outreach and safety material designed for residents of Tuscaloosa County, Alabama."></Label>
         <MDButton (tap)="goToInfo()" row="3" class="mat-button p-b-40" color="white" rippleColor="white" text="Close">
         </MDButton>

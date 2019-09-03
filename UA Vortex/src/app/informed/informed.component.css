@@ -5,3 +5,17 @@
   color: #fff;
   font-family: "Nunito";
 }
+.email {
+  transform: translateY(-1000);
+  background-color: #fff;
+  height: 40%;
+  width: 95%;
+  opacity: 1;
+  border-radius: 10;
+  margin: 10px;
+}
+
+.text-border {
+  border-bottom-color: rgb(44, 43, 43);
+  border-width: 0.5;
+}

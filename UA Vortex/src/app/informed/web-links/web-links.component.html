@@ -8,36 +8,39 @@
 <GridLayout backgroundColor="black" columns="*" rows="*,*,*,*">
 
     <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('radio')" pageTransition="slideLeft" class="container"
-        col="0" row="0" stretch="aspectFill" src="~/images/radio.jpg">
+        col="0" row="0" stretch="aspectFill" src="~/images/radio1.jpeg">
     </Image>
     <GridLayout (tap)="goToLink('radio')" pageTransition="slideLeft" col="0" row="0" verticalAlignment="bottom">
         <StackLayout class="title">
             <Label text="Weather Radio"></Label>
         </StackLayout>
     </GridLayout>
-    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('weather')" pageTransition="slideLeft" class="container"
-        col="0" row="1" stretch="aspectFill" src="~/images/info.png">
-    </Image>
-    <GridLayout (tap)="goToLink('weather')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
-        <StackLayout class="title">
-            <Label text="Weather Resources"></Label>
-        </StackLayout>
-    </GridLayout>
+
     <Image backgroundColor="black" height="175" width="175" decodeWidth="400" decodeHeight="400"
-        (tap)="goToLink('tusc')" pageTransition="slideLeft" class="container" col="0" row="2" stretch="aspectFit"
+        (tap)="goToLink('tusc')" pageTransition="slideLeft" class="container" col="0" row="1" stretch="aspectFit"
         src="~/images/tusc.png">
     </Image>
-    <GridLayout (tap)="goToLink('tusc')" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+    <GridLayout (tap)="goToLink('tusc')" pageTransition="slideLeft" col="0" row="1" verticalAlignment="bottom">
         <StackLayout class="title">
             <Label text="TuscAlert"></Label>
         </StackLayout>
     </GridLayout>
+
+    <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('weather')" pageTransition="slideLeft" class="container"
+        col="0" row="2" stretch="aspectFill" src="~/images/info.jpeg">
+    </Image>
+    <GridLayout (tap)="goToLink('weather')" pageTransition="slideLeft" col="0" row="2" verticalAlignment="bottom">
+        <StackLayout class="title">
+            <Label text="Local Media"></Label>
+        </StackLayout>
+    </GridLayout>
+
     <Image decodeWidth="400" decodeHeight="400" (tap)="goToLink('trends')" pageTransition="slideLeft" class="container"
-        col="0" row="3" stretch="aspectFill" src="~/images/trends.jpg">
+        col="0" row="3" stretch="aspectFill" src="~/images/trends.jpeg">
     </Image>
     <GridLayout (tap)="goToLink('trends')" pageTransition="slideLeft" col="0" row="3" verticalAlignment="bottom">
         <StackLayout class="title">
-            <Label text="Weather Trends"></Label>
+            <Label text="Local Weather History"></Label>
         </StackLayout>
     </GridLayout>
 
