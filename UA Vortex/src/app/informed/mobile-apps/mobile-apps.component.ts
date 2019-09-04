@@ -31,6 +31,9 @@ export class MobileAppsComponent implements OnInit {
             if (link == 'algo') {
                 utils.openUrl("https://apps.apple.com/us/app/algo-traffic-by-aldot-alea/id1141136558");
             }
+            if (link == 'tsco') {
+                utils.openUrl("https://apps.apple.com/us/app/tuscaloosa-county-sheriff/id905485668");
+            }
         } else {
             if (link == 'uasafety') {
                 utils.openUrl("https://play.google.com/store/apps/details?id=edu.ua.caps.uasafety");
@@ -38,7 +41,9 @@ export class MobileAppsComponent implements OnInit {
             if (link == 'algo') {
                 utils.openUrl("https://play.google.com/store/apps/details?id=edu.ua.caps.algoTraffic&hl=en_US");
             }
-
+            if (link == 'tsco') {
+                utils.openUrl("https://play.google.com/store/apps/details?id=edu.ua.caps.tcsopublic&hl=en_US");
+            }
         }
     }
 

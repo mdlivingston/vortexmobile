@@ -8,7 +8,7 @@
 .email {
   transform: translateY(-1000);
   background-color: #fff;
-  height: 40%;
+  height: 30%;
   width: 95%;
   opacity: 1;
   border-radius: 10;
@@ -18,4 +18,8 @@
 .text-border {
   border-bottom-color: rgb(44, 43, 43);
   border-width: 0.5;
+}
+
+.b {
+  height: 55;
 }

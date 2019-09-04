@@ -71,6 +71,7 @@ export class InformedComponent implements OnInit {
             if (avail) {
                 email.compose(this.composeOptions).then(result => {
                     console.log(result)
+                    this.closeEmail();
                 })
             }
         })

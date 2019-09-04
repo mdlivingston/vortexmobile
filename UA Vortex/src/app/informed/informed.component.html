@@ -37,17 +37,16 @@
     </GridLayout>
 
     <StackLayout rowSpan="3" #email class="email center top">
-        <GridLayout rows="50, *, 75" columns="150, *" class="form">
-            <Label colSpan="2" text="Contact Us" class="center"></Label>
+        <GridLayout rows="50, *, 75" columns="150, *" class="form p-10xc">
+            <Label colSpan="2" text="Contact CAPS" class="center"></Label>
 
-            <Label row="1" colSpan="2" textWrap="true"
-                text="Is it okay if we take you to the mail app so that you can contact us?"
+            <Label row="1" colSpan="2" textWrap="true" text="This will redirect you to the mail app."
                 class="center middle"></Label>
 
-            <Button row="2" col="0" text="No" (tap)="closeEmail()" backgroundColor="darkgray"
-                class="font-white bottom"></Button>
-            <Button row="2" col="1" text="Yes" (tap)="sendEmail()" backgroundColor="#a41c38"
-                class="font-white bottom"></Button>
+            <Button row="2" col="0" text="Cancel" (tap)="closeEmail()" backgroundColor="darkgray"
+                class="font-white bottom b"></Button>
+            <Button row="2" col="1" text="Okay" (tap)="sendEmail()" backgroundColor="#a41c38"
+                class="font-white bottom b"></Button>
         </GridLayout>
     </StackLayout>
 </GridLayout>

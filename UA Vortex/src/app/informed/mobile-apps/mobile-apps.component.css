@@ -1,1 +1,11 @@
 /* Add mobile styles for the component here.  */
+.title {
+  padding: 8 16 4 8;
+  font-size: 16;
+  color: #000;
+  font-family: "Nunito";
+}
+.text-border {
+  border-bottom-color: rgb(44, 43, 43);
+  border-width: 0.5;
+}

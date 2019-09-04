@@ -5,13 +5,25 @@
 </ActionBar>
 
 
-<GridLayout backgroundColor="black" columns="*" rows="*,*">
-    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('uasafety')"
+<GridLayout backgroundColor="black" columns="*" rows="*,*,*">
+    <Image class="text-border" backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('uasafety')"
         pageTransition="slideLeft" class="container" col="0" row="0" stretch="aspectFit" src="~/images/uasafety.jpg">
     </Image>
+    <GridLayout class="text-border" (tap)="goToLink('uasafety')" col="0" row="0" verticalAlignment="bottom">
 
-    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('algo')"
-        pageTransition="slideLeft" class="container" col="0" row="1" stretch="aspectFit" src="~/images/algo.png">
+    </GridLayout>
+    <Image class="text-border" backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('algo')"
+        pageTransition="slideLeft" class="container" col="0" row="2" stretch="aspectFit" src="~/images/algo.png">
     </Image>
+    <GridLayout class="text-border" (tap)="goToLink('algo')" col="0" row="2" verticalAlignment="bottom">
 
+    </GridLayout>
+    <Image backgroundColor="white" decodeWidth="400" decodeHeight="400" (tap)="goToLink('tsco')"
+        pageTransition="slideLeft" class="container" col="0" row="1" stretch="aspectFit" src="~/images/tcso.jpg">
+    </Image>
+    <GridLayout class="text-border" (tap)="goToLink('tsco')" col="0" row="1" verticalAlignment="bottom">
+        <StackLayout class="title center">
+            <Label text="Tuscaloosa County Sheriff"></Label>
+        </StackLayout>
+    </GridLayout>
 </GridLayout>
