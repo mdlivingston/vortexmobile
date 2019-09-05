@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
-import { Page, isIOS } from 'tns-core-modules/ui/page/page';
-import * as utils from "tns-core-modules/utils/utils";
+import { Page } from 'tns-core-modules/ui/page/page';
+
 import { DataService } from '../services/data.service';
 import * as email from "nativescript-email";
 import { AnimationCurve } from 'tns-core-modules/ui/enums/enums';
-import { TextView } from "tns-core-modules/ui/text-view/text-view";
+
 @Component({
     selector: 'ns-informed',
     templateUrl: './informed.component.html',

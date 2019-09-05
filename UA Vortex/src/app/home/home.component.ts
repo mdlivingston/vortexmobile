@@ -1,4 +1,3 @@
-import { WebView } from 'tns-core-modules/ui/web-view/web-view';
 import { DataService } from './../services/data.service';
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Page, EventData, isAndroid } from "tns-core-modules/ui/page/page";

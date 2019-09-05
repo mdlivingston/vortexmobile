@@ -1,7 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
-import { RouterExtensions } from 'nativescript-angular/router';
-import { Page } from 'tns-core-modules/ui/page/page';
-import { WebView, LoadEventData } from 'tns-core-modules/ui/web-view/web-view';
+import { LoadEventData } from 'tns-core-modules/ui/web-view/web-view';
 
 @Component({
     selector: 'ns-webview',
